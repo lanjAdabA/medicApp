@@ -1,5 +1,6 @@
-import 'package:assignment/widgets/dashboardTiles.dart';
 import 'package:flutter/material.dart';
+
+import '../widgets/dashboardTiles.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -12,14 +13,14 @@ class _DashboardPageState extends State<DashboardPage> {
   List<Map<String, dynamic>> dashboard = [
     {"img": "assets/patient.png", "caption": "Patient Enrolmment"},
     {"img": "assets/manage.png", "caption": "HealthCare Management"},
-    {"img": "assets/patient.png", "caption": "Patient Enrolmment"},
-    {"img": "assets/manage.png", "caption": "HealthCare Management"},
-    {"img": "assets/patient.png", "caption": "Patient Enrolmment"},
-    {"img": "assets/manage.png", "caption": "HealthCare Management"},
-    {"img": "assets/patient.png", "caption": "Patient Enrolmment"},
-    {"img": "assets/manage.png", "caption": "HealthCare Management"},
-    {"img": "assets/patient.png", "caption": "Patient Enrolmment"},
-    {"img": "assets/manage.png", "caption": "HealthCare Management"},
+    {"img": "assets/box.png", "caption": "HubX"},
+    {"img": "assets/nurse.png", "caption": "Nursing"},
+    {"img": "assets/eldery.png", "caption": "Elderly Care"},
+    {"img": "assets/service.png", "caption": "Wellness Services"},
+    {"img": "assets/medical.png", "caption": "Medical Services"},
+    {"img": "assets/physio.png", "caption": "Physiotherapy"},
+    {"img": "assets/dental.png", "caption": "Dental"},
+    {"img": "assets/sync.png", "caption": "sync"},
   ];
   @override
   Widget build(BuildContext context) {
@@ -59,7 +60,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 ),
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
-                  return dashTile(
+                  return DashTile(
                     caption: dashboard[index]["caption"],
                     img: dashboard[index]["img"],
                   );

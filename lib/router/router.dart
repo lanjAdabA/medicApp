@@ -3,6 +3,7 @@
 // @CustomAutoRouter
 import 'package:assignment/pages/dashboard.page.dart';
 import 'package:assignment/pages/login.page.dart';
+import 'package:assignment/pages/patientList.page.dart';
 import 'package:auto_route/annotations.dart';
 
 @MaterialAutoRouter(
@@ -10,6 +11,7 @@ import 'package:auto_route/annotations.dart';
   routes: <AutoRoute>[
     AutoRoute(page: LoginPage, initial: true),
     AutoRoute(page: DashboardPage),
+    AutoRoute(page: PatientListPage),
   ],
 )
 class $AppRouter {}
